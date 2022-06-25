@@ -1,0 +1,105 @@
+.header,
+.loan-item,
+.total-4-investment,
+.amount-available,
+.invest-button,
+.invest-success,
+.modal,
+.investment-input,
+.inter-regular,
+.inter-medium,
+.inter-semi-bold {
+  font-family: "interRegular", sans-serif;
+  font: {
+    size: 20px;
+    weight: 400;
+  }
+  line-height: 24px;
+  color: #303247;
+}
+
+.header {
+  border-bottom: 1px solid rgba(48, 50, 71, 0.1);
+  .title {
+    font: {
+      size: 30px;
+      weight: 600;
+    }
+    line-height: 36px;
+
+    margin: 32px 64px;
+  }
+}
+
+.loan-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 64px;
+
+  width: 50%;
+  border: 1px solid rgba(48, 50, 71, 0.1);
+  border-radius: 20px;
+
+  .loan-name {
+    margin: 32px 0 0 32px;
+    font: {
+      size: 25px;
+      weight: 600;
+    }
+    line-height: 30px;
+  }
+  .loan-details {
+    margin: 16px 0 32px 33px;
+  }
+}
+
+.total-4-investment {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 60px 0 0 64px;
+  width: 50%;
+  font-weight: 600;
+  .amount-available {
+    font-weight: 600;
+  }
+}
+.invest-button {
+  margin: 46px 32px 32px 32px;
+  width: 137px;
+  height: 56px;
+  background-color: #f7e308;
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  color: #303247;
+}
+
+.button-item {
+  display: flex;
+  flex-direction: column;
+
+  .invest-success {
+    display: none;
+    font: {
+      size: 16px;
+      weight: 600;
+    }
+    margin: 13px 32px -32px 0;
+    text-align: end;
+    line-height: 20px;
+    color: #51a571;
+  }
+  .invest-success.active {
+    display: block;
+  }
+}
+
+.inter-medium {
+  font-family: "interMedium", sans-serif;
+}
+.inter-semi-bold {
+  font-family: "interSemiBold", sans-serif;
+}

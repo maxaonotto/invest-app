@@ -1,0 +1,79 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(26, 26, 26, 0.8);
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  padding: 64px;
+  width: 40vw;
+
+  background: #ffffff;
+  border-radius: 5px;
+  transform: scale(0.5);
+  transition: 0.4s all;
+  .investment-title {
+    font: {
+      size: 35px;
+      weight: 600;
+      family: "interSemiBold", sans-serif;
+    }
+    line-height: 42px;
+  }
+  .investment-name {
+    margin-top: 32px;
+  }
+  .investment-available {
+    margin-top: 32px;
+  }
+  .investment-timer {
+    margin: 8px 0 64px 0;
+  }
+}
+.modal-content.active {
+  transform: scale(1);
+}
+.investment-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 29px;
+  height: 56px;
+  .investment-input {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    padding: 16px 32px;
+
+    background: #ffffff;
+    border: 1px solid rgba(48, 50, 71, 0.1);
+    border-radius: 5px;
+  }
+  .invest-button {
+    margin: 0;
+  }
+}
+.close {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  margin: 40px;
+  cursor: pointer;
+}
