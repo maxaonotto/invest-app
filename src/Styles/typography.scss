@@ -5,10 +5,7 @@
 .invest-button,
 .invest-success,
 .modal,
-.investment-input,
-.inter-regular,
-.inter-medium,
-.inter-semi-bold {
+.investment-input {
   font-family: "interRegular", sans-serif;
   font: {
     size: 20px;
@@ -17,7 +14,6 @@
   line-height: 24px;
   color: #303247;
 }
-
 .header {
   border-bottom: 1px solid rgba(48, 50, 71, 0.1);
   .title {
@@ -95,11 +91,4 @@
   .invest-success.active {
     display: block;
   }
-}
-
-.inter-medium {
-  font-family: "interMedium", sans-serif;
-}
-.inter-semi-bold {
-  font-family: "interSemiBold", sans-serif;
 }
