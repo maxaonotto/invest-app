@@ -22,11 +22,11 @@ function Modal({
               available: Number(
                 active.element.available.replace(",", "") -
                   investedInput.current.value
-              ).toString(),
+              ).toLocaleString("en-US"),
               amount: Number(
                 active.element.amount.replace(",", "") -
                   investedInput.current.value
-              ).toString(),
+              ).toLocaleString("en-US"),
             }
           : e
       )
@@ -38,11 +38,12 @@ function Modal({
       : setSuccessInvest([...successInvest, active.element.id]);
     investedInput.current.value = "";
   }
-  function Convert(value) {
-    let hour = value % 60;
-    let days = hour % 24;
-    let month = days % 30;
-    return `${month} month ${days} days`;
+  function convert(value) {
+    let days = Math.floor(Number(value) / 60 / 24);
+    let day_text = days <= 1 ? " day" : " days";
+    let months = Math.floor(days / 30);
+    let mon_text = months <= 1 ? " month " : " months ";
+    return months + mon_text + (days - months * 30) + day_text;
   }
   return (
     <section
@@ -66,7 +67,7 @@ function Modal({
           Amount available: ${active.element?.available}
         </h3>
         <h3 className="investment-timer">
-          Loan ends in: {Convert(Number(active.element?.term_remaining))}
+          Loan ends in: {convert(active.element?.term_remaining)}
         </h3>
         <h1 className="investment-title">Investment amount</h1>
         <section className="investment-amount">

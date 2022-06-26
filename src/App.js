@@ -16,9 +16,9 @@ function App() {
       loans
         .map((e) => e.amount.replace(",", ""))
         .reduce((e, counter) => Number(e) + Number(counter))
+        .toLocaleString("en-US")
     );
   }, [loans]);
-  console.log(successInvest);
   return (
     <div className="App">
       <main>
@@ -55,7 +55,7 @@ function App() {
         <section className="total-4-investment">
           Total amount available for investment:
           <span className="amount-available">
-            ${totalAmount.toLocaleString()}
+            ${totalAmount.toLocaleString("en-US")}
           </span>
         </section>
       </main>
